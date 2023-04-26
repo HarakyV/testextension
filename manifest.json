@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Password Extension",
+  "description": "A Chrome extension that requires a password to unlock",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}

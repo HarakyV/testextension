@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Extension</title>
+  </head>
+  <body>
+    <h1>Password Extension</h1>
+    <p>Please enter the password to unlock:</p>
+    <input type="password" id="password">
+    <button id="submit">Submit</button>
+
+    <script type="text/javascript">
+      const passwordInput = document.getElementById("password");
+      const submitButton = document.getElementById("submit");
+
+      submitButton.addEventListener("click", () => {
+        if (passwordInput.value === "unlock") {
+          chrome.tabs.update({url: "hello1.html"});
+        } else {
+          alert("Incorrect password!");
+        }
+      });
+    </script>
+  </body>
+</html>
